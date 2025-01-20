@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us - REY PREMIUM VOGUE{% endblock %}
+
+{% block content %}
+    <!-- About Header -->
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-serif text-center">About REY PREMIUM VOGUE</h1>
+            <p class="text-center text-gray-600 mt-4">
+                Redefining luxury menswear with timeless elegance and contemporary style.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-serif mb-6">Our Story</h2>
+                        <div class="prose prose-lg">
+                            <p>
+                                Founded in 2024, REY PREMIUM VOGUE was born from a passion for exceptional menswear 
+                                and a vision to create a luxury shopping experience that caters to the modern gentleman.
+                            </p>
+                            <p class="mt-4">
+                                Our journey began with a simple idea: to provide men with access to premium clothing 
+                                and footwear that combines classic sophistication with contemporary design, all while 
+                                delivering an unparalleled online shopping experience.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="{% static 'images/about/store.jpg' %}" 
+                             alt="REY PREMIUM VOGUE Store" 
+                             class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif text-center mb-12">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                    <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">Quality</h3>
+                    <p class="text-gray-600">
+                        We source only the finest materials and partner with renowned manufacturers 
+                        to ensure every piece meets our exacting standards.
+                    </p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                    <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">Innovation</h3>
+                    <p class="text-gray-600">
+                        We embrace the latest trends and technologies while maintaining 
+                        our commitment to timeless style and sophistication.
+                    </p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                    <div class="w-16 h-16 bg-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-medium mb-4">Community</h3>
+                    <p class="text-gray-600">
+                        We build lasting relationships with our customers and partners, 
+                        fostering a community of style-conscious gentlemen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-serif mb-6">Our Mission</h2>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    To empower men to express their unique style through carefully curated premium fashion, 
+                    while providing an exceptional shopping experience that combines convenience with luxury.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif text-center mb-12">Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="{% static 'images/team/ceo.jpg' %}" 
+                         alt="CEO" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-medium">John Smith</h3>
+                        <p class="text-gray-500">CEO & Founder</p>
+                        <p class="text-gray-600 mt-4">
+                            With over 20 years of experience in luxury retail, John leads our vision 
+                            for redefining premium menswear.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="{% static 'images/team/creative-director.jpg' %}" 
+                         alt="Creative Director" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-medium">Sarah Johnson</h3>
+                        <p class="text-gray-500">Creative Director</p>
+                        <p class="text-gray-600 mt-4">
+                            Sarah brings her innovative design perspective and industry expertise 
+                            to curate our exceptional collection.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="{% static 'images/team/head-stylist.jpg' %}" 
+                         alt="Head Stylist" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-medium">Michael Chen</h3>
+                        <p class="text-gray-500">Head Stylist</p>
+                        <p class="text-gray-600 mt-4">
+                            Michael's expertise in styling and fashion trends helps our customers 
+                            discover their perfect look.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-serif mb-6">Join Our Journey</h2>
+                <p class="text-gray-600 mb-8">
+                    Experience luxury menswear reimagined for the modern gentleman. 
+                    Subscribe to our newsletter to stay updated on our latest collections and exclusive offers.
+                </p>
+                <form class="max-w-md mx-auto flex gap-4">
+                    <input type="email" placeholder="Enter your email" 
+                           class="flex-1 rounded-lg border-gray-300 shadow-sm focus:border-accent focus:ring-accent">
+                    <button type="submit" 
+                            class="bg-accent hover:bg-opacity-90 text-white px-6 py-2 rounded-lg transition duration-300">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %} 

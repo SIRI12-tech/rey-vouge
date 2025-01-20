@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .content {
+            background-color: #f9fafb;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        .order-items {
+            margin: 20px 0;
+        }
+        .item {
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .total {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .customer-info {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <h1>REY PREMIUM VOGUE - New Order</h1>
+    </div>
+    
+    <div class="content">
+        <h2>New Order Received</h2>
+        
+        <div class="customer-info">
+            <h3>Customer Information:</h3>
+            <p>
+                <strong>Name:</strong> {{ shipping.first_name }} {{ shipping.last_name }}<br>
+                <strong>Email:</strong> {{ shipping.email }}<br>
+                <strong>Phone:</strong> {{ shipping.phone_number }}
+            </p>
+            
+            <h3>Shipping Address:</h3>
+            <p>
+                {{ shipping.address }}<br>
+                {{ shipping.city }}, {{ shipping.state }} {{ shipping.postal_code }}<br>
+                {{ shipping.country }}
+            </p>
+        </div>
+        
+        <h3>Order Details:</h3>
+        <div class="order-items">
+            {% for item in cart.items.all %}
+            <div class="item">
+                <p>
+                    <strong>{{ item.product.name }}</strong><br>
+                    Size: {{ item.size }} | Color: {{ item.color }}<br>
+                    Quantity: {{ item.quantity }} | Price: ₦{{ item.total_price }}<br>
+                    Product Link: <a href="{{ site_url }}{% url 'products:product_detail' item.product.slug %}">View Product</a>
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="total">
+            <p>
+                Subtotal: ₦{{ cart.subtotal }}<br>
+                Shipping: ₦{{ cart.shipping_cost }}<br>
+                Total: ₦{{ cart.total }}
+            </p>
+        </div>
+        
+        <p>Please process this order as soon as possible.</p>
+    </div>
+</body>
+</html> 

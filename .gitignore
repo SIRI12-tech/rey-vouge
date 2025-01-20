@@ -1,0 +1,29 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+/media
+
+# Virtual Environment
+venv/
+.env
+
+# Django migrations
+*/migrations/*
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+
+# Local settings
+*.local
