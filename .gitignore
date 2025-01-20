@@ -11,7 +11,26 @@ __pycache__/
 *.pyc
 *.sqlite3
 db.sqlite3
-/media
+
+# Media folder
+/media/*
+
+# Exclude categories and product folders themselves
+!/media/categories/
+!/media/product/
+
+# Ignore images inside categories and product folders
+/media/categories/*.png
+/media/categories/*.jpg
+/media/categories/*.jpeg
+/media/categories/*.gif
+/media/categories/*.svg
+
+/media/product/*.png
+/media/product/*.jpg
+/media/product/*.jpeg
+/media/product/*.gif
+/media/product/*.svg
 
 # Virtual Environment
 venv/
