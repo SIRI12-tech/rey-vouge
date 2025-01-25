@@ -4,6 +4,7 @@
 *.pyd
 __pycache__/
 *.db
+.vscode/
 
 # Django specific
 *.log
@@ -15,9 +16,11 @@ db.sqlite3
 # Media folder
 /media/*
 
-# Exclude categories and product folders themselves
+# Explicitly include categories and product folders and their contents
 !/media/categories/
+/media/categories/*
 !/media/product/
+/media/product/*
 
 # Ignore images inside categories and product folders
 /media/categories/*.png
